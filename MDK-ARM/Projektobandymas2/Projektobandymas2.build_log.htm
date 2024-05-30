@@ -1,0 +1,107 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Gytis Paiðys, KTU, LIC=MJWBM-G4SCE-DMP9C-KRDB4-EABNQ-K9D07
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Community  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+C:\Users\Admin\Desktop\6 semestras\IS\Projektobandymas2\MDK-ARM\Projektobandymas2.uvprojx
+Project File Date:  05/27/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Projektobandymas2'
+assembling startup_stm32l073xx.s...
+compiling stm32l0xx_it.c...
+../Core/Src/main.c(139): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                if (HAL_UART_Transmit(&huart2,TxBuffer,strlen(TxBuffer),1000)!=HAL_OK)
+                                                              ^~~~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+                                               ^
+../Core/Src/main.c(189): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        if (HAL_UART_Transmit(&huart2,TxBuffer,strlen(TxBuffer),1000)!=HAL_OK)
+                                                                      ^~~~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+                                               ^
+../Core/Src/main.c(198): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        SSD1306_Puts (TxBuffer, &Font_11x18, 1); // print 
+                                      ^~~~~~~~
+../Core/Inc\ssd1306.h(151): note: passing argument to parameter 'str' here
+char SSD1306_Puts(char* str, FontDef_t* Font, SSD1306_COLOR_t color);
+                        ^
+3 warnings generated.
+compiling main.c...
+compiling stm32l0xx_hal_msp.c...
+compiling stm32l0xx_hal_comp.c...
+compiling stm32l0xx_hal_comp_ex.c...
+compiling stm32l0xx_hal.c...
+compiling stm32l0xx_hal_i2c_ex.c...
+compiling stm32l0xx_hal_rcc.c...
+compiling stm32l0xx_hal_i2c.c...
+compiling stm32l0xx_hal_rcc_ex.c...
+compiling stm32l0xx_hal_flash_ramfunc.c...
+compiling stm32l0xx_hal_flash.c...
+compiling stm32l0xx_hal_flash_ex.c...
+compiling stm32l0xx_hal_gpio.c...
+compiling stm32l0xx_hal_dma.c...
+compiling stm32l0xx_hal_pwr.c...
+compiling stm32l0xx_hal_pwr_ex.c...
+compiling stm32l0xx_hal_cortex.c...
+compiling stm32l0xx_hal_exti.c...
+compiling stm32l0xx_hal_tim_ex.c...
+compiling stm32l0xx_hal_tim.c...
+compiling stm32l0xx_hal_uart_ex.c...
+compiling stm32l0xx_hal_uart.c...
+compiling system_stm32l0xx.c...
+compiling fonts.c...
+compiling ssd1306.c...
+compiling test.c...
+linking...
+Program Size: Code=29076 RO-data=4540 RW-data=20 ZI-data=3108  
+FromELF: creating hex file...
+"Projektobandymas2\Projektobandymas2.axf" - 0 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32L0xx_DFP.2.2.0.pack
+                Keil.STM32L0xx_DFP.2.2.0
+                STMicroelectronics STM32L0 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Projektobandymas2
+  C:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32L0xx_DFP/2.2.0/Drivers/CMSIS/Device/ST/STM32L0xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:06
+</pre>
+</body>
+</html>
